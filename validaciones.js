@@ -28,6 +28,6 @@ function validarLogin() {
     }
 
     // Si todas las validaciones pasan, permitir el envío del formulario
-    alert("Validacion Correcta")
+    alert("Validacion Correcta");
     return true;
 }
