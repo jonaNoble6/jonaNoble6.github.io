@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <script src="validaciones.js" defer></script>     <!--  mandamos a llamar nuestro archivo js creado previamente -->
+    <script src="api.js" defer></script>
+    <script src="script.js"defer></script>
+</head>
+    <body>
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm" onsubmit="return validarLogin()">     <!-- manda a llamar el evento validarlogin del archivo js -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <h1>Rick y Morty API</h1>
+        <button onclick="return mostrarLista()"> MOSTRAR TODOS</button> <!-- manda  a llamar el evento mostrarLista del archivo js -->
+        <ul id="personajes" style="display: none;"></ul> <!-- aqui se despliega con la etiqueta lista  -->
+
+        <h1>Personajes de Rick and Morty</h1>
+    <button onclick="return mostrarLista()">Mostrar Lista</button>
+    <button onclick=" agregarPersonaje()">Agregar Personaje</button>
+    <button onclick="borrarLista()">Borrar Lista</button>
+    <ul id="personajes" style="display: none;"></ul>
+    <li id="personajesLista"></li>
+
+    </body>
+</html>
